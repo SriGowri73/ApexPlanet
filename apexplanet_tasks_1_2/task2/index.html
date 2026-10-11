@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 | Contact Form and To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top">Task<span>Flow</span></a>
+      <div class="nav-links"><a href="#contact">Contact</a><a href="#tasks">To-Do List</a></div>
+    </nav>
+    <div id="top" class="intro">
+      <p class="eyebrow">APEXPLANET INTERNSHIP · TASK 2</p>
+      <h1>Organize your day.<br><span>Keep moving forward.</span></h1>
+      <p>A responsive page with form validation and a dynamic to-do list.</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section id="contact" class="panel">
+      <p class="eyebrow">SAY HELLO</p>
+      <h2>Contact Form</h2>
+      <p class="muted">All fields are required. Enter a valid email address.</p>
+      <form id="contactForm" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required minlength="2">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message..." required minlength="5"></textarea>
+        <button type="submit">Validate Form</button>
+        <p id="formFeedback" class="feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="tasks" class="panel todo-panel">
+      <p class="eyebrow">STAY PRODUCTIVE</p>
+      <h2>My To-Do List</h2>
+      <p class="muted">Add tasks, mark them complete, or remove them.</p>
+      <form id="todoForm" class="todo-form">
+        <label class="visually-hidden" for="todoInput">New task</label>
+        <input id="todoInput" type="text" placeholder="e.g. Practice CSS Grid" maxlength="120" required>
+        <button type="submit">Add Task</button>
+      </form>
+      <p id="todoFeedback" class="feedback" role="status" aria-live="polite"></p>
+      <ul id="todoList" class="todo-list"></ul>
+      <p class="hint">Tip: your list stays on this page while it is open; refresh to start fresh.</p>
+    </section>
+  </main>
+
+  <section class="features">
+    <article><h3>Flexbox navigation</h3><p>The header uses Flexbox to arrange navigation links.</p></article>
+    <article><h3>CSS Grid layout</h3><p>The main content uses Grid on wide screens and stacks on small screens.</p></article>
+    <article><h3>DOM manipulation</h3><p>JavaScript creates, updates, and removes task elements dynamically.</p></article>
+  </section>
+  <footer>Created for ApexPlanet Web Development Internship · Task 2</footer>
+  <script src="script.js"></script>
+</body>
+</html>
